@@ -1,0 +1,2 @@
+# Única fonte das seeds do projeto; lidas por src/seeding.py.
+global_seed: 20261106

@@ -1,0 +1,15 @@
+# Ambiente
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Pesos de modelos (descarregados pelo Hugging Face; revisões em configs/models.yaml)
+models/
+*.safetensors
+*.gguf
+
+# Segredos e sistema
+.env
+.DS_Store
+Thumbs.db

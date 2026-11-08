@@ -1,0 +1,136 @@
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_compute_dtype: float16
+  bnb_4bit_use_double_quant: false
+models:
+  qwen3-8b:
+    id: Qwen/Qwen3-8B
+    revision: b968826d9c46dd6066d109eabc6255188de91218
+    family: Qwen
+    license: apache-2.0
+    gated: false
+    parameters: 8190735360
+    languages: Model card claims 100+ languages and dialects, with no per-language
+      list.
+    template_kwargs:
+      enable_thinking: false
+    notes: Thinking is on by default. Turning it off makes the template append an
+      empty think block.
+    files:
+      config.json:
+        git_blob: d46195ac87f837ad233d02b2f80f148bf7c005e0
+        size: 728
+      generation_config.json:
+        git_blob: 20a8a9156fc8c3f25295ca067f61fdf120d517c5
+        size: 239
+      merges.txt:
+        git_blob: 31349551d90c7606f325fe0f11bbb8bd5fa0d7c7
+        size: 1671853
+      model-00001-of-00005.safetensors:
+        sha256: 31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f
+        size: 3996250744
+      model-00002-of-00005.safetensors:
+        sha256: 5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282
+        size: 3993160032
+      model-00003-of-00005.safetensors:
+        sha256: c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836
+        size: 3959604768
+      model-00004-of-00005.safetensors:
+        sha256: b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a
+        size: 3187841392
+      model-00005-of-00005.safetensors:
+        sha256: 20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff
+        size: 1244659840
+      model.safetensors.index.json:
+        git_blob: 2b85c00f1b118961cd7a477e2bba0fe197a4ce1a
+        size: 32878
+      tokenizer.json:
+        sha256: aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4
+        size: 11422654
+      tokenizer_config.json:
+        git_blob: 417d038a63fa3de29cfde265caedae14d1a58d92
+        size: 9732
+      vocab.json:
+        git_blob: 4783fe10ac3adce15ac8f358ef5462739852c569
+        size: 2776833
+  gemma-4-e4b:
+    id: google/gemma-4-E4B-it
+    revision: 4ecc2ba63bcac23ba4a767fc87025b1450f84c9c
+    family: Gemma
+    license: apache-2.0
+    gated: false
+    parameters: 7996156490
+    languages: Model card claims 35+ languages out of the box and 140+ in training,
+      with no per-language list.
+    cpu_modules:
+    - model.language_model.embed_tokens_per_layer
+    template_kwargs:
+      enable_thinking: false
+    notes: 8B parameters including embeddings, 4.5B effective per the model card,
+      so a smaller text model than the other two. Multimodal checkpoint, used for
+      text only.
+    files:
+      chat_template.jinja:
+        git_blob: fbe3b59b625cd1b8850ea592d4203df6ec04684b
+        size: 18569
+      config.json:
+        git_blob: d68960fdcce766f2bfe41436325a8a483a74d125
+        size: 5145
+      generation_config.json:
+        git_blob: e605bb4523b1462ea9d9a3810b9e3ecf7ab7b1f6
+        size: 208
+      model.safetensors:
+        sha256: cfbd3d2f1cd71bd471c37fe2bf8546d5028d41e5736f64e1ca6c6b8893125503
+        size: 15992595884
+      processor_config.json:
+        git_blob: 5465974d23e1eca2c46c2809b26c997946ce0d90
+        size: 1689
+      tokenizer.json:
+        sha256: 91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc
+        size: 32156428
+      tokenizer_config.json:
+        git_blob: 6068e357379d36f823c377e30efb101fa2c67fe4
+        size: 3082
+  aya-expanse-8b:
+    id: CohereLabs/aya-expanse-8b
+    revision: 5062468bf9bc0c6035fd64e06274333ec127d980
+    family: Aya
+    license: cc-by-nc-4.0
+    gated: auto
+    parameters: 8028033024
+    languages: Model card lists 23 languages, including en, pt, zh, ar and hi.
+    template_kwargs: {}
+    notes: Non-commercial licence. Access requires accepting the conditions on Hugging
+      Face and a token.
+    files:
+      config.json:
+        git_blob: 7eacbad38ae88c241f2d7e51c3e691da0f6d3518
+        size: 634
+      generation_config.json:
+        git_blob: 3081a1762f9567adae7b187f95eeff880bf474cc
+        size: 137
+      model-00001-of-00004.safetensors:
+        sha256: 4caed059a6c25f86bc9c576c852438b220179a410725e8c6e02a02567bb25811
+        size: 4915779640
+      model-00002-of-00004.safetensors:
+        sha256: c98d47d38a411c1f71b6ef21d85890f90f8b215df49ee11679b2f21deb411ddd
+        size: 4915824616
+      model-00003-of-00004.safetensors:
+        sha256: d879c402bed6398a700784fade48fd3fc9941d86c621caf0973fedc54b2c8400
+        size: 4999719496
+      model-00004-of-00004.safetensors:
+        sha256: d0510958ff72c271230ddc0c880c49102bcd8dedc6d00ab290cffb51efe335f3
+        size: 1224771920
+      model.safetensors.index.json:
+        git_blob: 3136b2a38ed621bbf5b5d071d6acb4562130ff0d
+        size: 20990
+      special_tokens_map.json:
+        git_blob: cf33f2e5e3a66711d05c07c8047dcdb59005494e
+        size: 439
+      tokenizer.json:
+        sha256: c69a7ea6c0927dfac8c349186ebcf0466a4723c21cbdb2e850cf559f0bee92b8
+        size: 12777433
+      tokenizer_config.json:
+        git_blob: cda9c2b2bf5ab424e30b1bf8faf9b42dfcc27519
+        size: 8641
