@@ -20,7 +20,16 @@ Master items in English, one row per item. UTF-8, comma-separated. Check the fil
 
 Option 1 always favours `value_1` in this file. Whether an option is shown as A or B is decided when the prompt is built, so the order can be swapped without touching the data.
 
+## `translations/<language>.csv`
+
+One file per language (for example `pt-PT.csv`), with the same `item_id`s as `dilemmas.csv`. Columns: `item_id`, `scenario`, `option_1`, `option_2`, `notes`. Option 1 is still the option that favours `value_1`. The text around the item (system message, "Option", instruction) is in `configs/prompt.yaml`, and a language also needs an entry there. The `A`/`B` labels are never translated.
+
+## `paraphrases/<language>.csv`
+
+Rewordings of the scenario only, with the options left as they are. Columns: `item_id`, `scenario`, `notes`.
+
+Check both kinds of file with `python -m src.prompts`.
+
 ## Other folders
 
-- `translations/`: one file or folder per language
-- `results/`: raw outputs, kept in the repository
+- `results/`: raw outputs, kept in the repository. `results/checks/` holds the step 4 checks for each model

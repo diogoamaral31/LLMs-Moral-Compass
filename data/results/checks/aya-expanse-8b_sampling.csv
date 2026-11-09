@@ -1,0 +1,31 @@
+item_id,order,p_A,p_B,p_other,freq_A,freq_B,freq_other,examples,abs_diff_A,z
+D13,BA,0.4371154308319092,0.5612673163414001,0.0016172528266906738,0.3333333333333333,0.6666666666666666,0.0,"B
+
+While it's natural to | B
+
+While it's natural to | A
+
+While it's important to",0.10378209749857586,-1.1459754939534377
+D09,BA,0.00010769096115836874,0.004579136613756418,0.9953131724250852,0.0,0.0,1.0,"This is an incredibly difficult situation, and | This is a deeply personal and complex decision | This is a deeply personal and complex decision",0.00010769096115836874,-0.010769096115836874
+D09,AB,0.026707680895924568,2.0190385839669034e-05,0.9732721287182358,0.0,0.0,1.0,This is a deeply personal and complex situation | This is a deeply personal and complex decision | This is a deeply personal and complex decision,0.026707680895924568,-0.9073128644784616
+D11,BA,0.9957211017608643,0.0001787918881746009,0.004100106350961141,1.0,0.0,0.0,"A
+
+While it's important to | A
+
+While it's important to | A
+
+While it's important to",0.004278898239135742,0.35905233134554215
+D15,AB,3.089935489697382e-05,0.9902723431587219,0.009696757486381102,0.0,0.9666666666666667,0.033333333333333326,"B
+
+Given the circumstances, declining | B
+
+Given the circumstances, declining | B
+
+Given the circumstances, declining",3.089935489697382e-05,-0.003089935489697382
+D15,BA,0.9837946891784668,1.861881355580408e-05,0.0161866920079774,0.9666666666666667,0.0,0.033333333333333326,"A
+
+While it is understandable that | A
+
+Given the circumstances, declining | A
+
+Declining the meat and",0.017128022511800123,-0.7429967822008974

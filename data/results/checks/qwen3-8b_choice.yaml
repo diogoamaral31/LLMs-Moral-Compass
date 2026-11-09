@@ -1,0 +1,47 @@
+model: qwen3-8b
+model_id: Qwen/Qwen3-8B
+revision: b968826d9c46dd6066d109eabc6255188de91218
+quant: 4bit-nf4-float16
+template_version: v1
+seed: 20261106
+label_tokens:
+  A:
+    main: 32
+    variants:
+    - A
+    - ĠA
+    - ĉA
+  B:
+    main: 33
+    variants:
+    - B
+    - ĠB
+    - ĉB
+prompt_tail: 'im_end|>
+
+  <|im_start|>assistant
+
+  <think>
+
+
+  </think>
+
+
+  '
+requests: 40
+greedy_is_top: 1.0
+greedy_is_label: 1.0
+greedy_matches_ab_argmax: 1.0
+p_other_mean: 1.3237579722435998e-06
+p_other_max: 4.565656739452528e-05
+variant_mass_max: 0.0
+control_accuracy: 1.0
+position_bias_mean_p_A: 0.4576377182003878
+latency_s_median: 0.16540620000159834
+prompt_tokens_median: 119.0
+sampling:
+  items: 6
+  samples_per_item: 30
+  mean_abs_diff_A: 0.0642003235200213
+  max_abs_z: 2.6130125777892697
+passed: true

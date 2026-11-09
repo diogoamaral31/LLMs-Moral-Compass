@@ -1,0 +1,41 @@
+model: gemma-4-e4b
+model_id: google/gemma-4-E4B-it
+revision: 4ecc2ba63bcac23ba4a767fc87025b1450f84c9c
+quant: 4bit-nf4-float16
+template_version: v1
+seed: 20261106
+label_tokens:
+  A:
+    main: 236776
+    variants:
+    - A
+    - <0x41>
+    - ▁A
+  B:
+    main: 236799
+    variants:
+    - B
+    - <0x42>
+    - ▁B
+prompt_tail: 'with a single letter: A or B.<turn|>
+
+  <|turn>model
+
+  '
+requests: 40
+greedy_is_top: 1.0
+greedy_is_label: 0.95
+greedy_matches_ab_argmax: 1.0
+p_other_mean: 0.042235607793521625
+p_other_max: 0.9743167841807008
+variant_mass_max: 9.313225746154785e-10
+control_accuracy: 1.0
+position_bias_mean_p_A: 0.3561181508554244
+latency_s_median: 0.17683610001404304
+prompt_tokens_median: 119.5
+sampling:
+  items: 6
+  samples_per_item: 30
+  mean_abs_diff_A: 0.06778724093197121
+  max_abs_z: 1.9768003906059344
+passed: true

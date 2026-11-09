@@ -1,0 +1,18 @@
+# Template do prompt (passo 4). Congelado: mudar qualquer texto obriga a subir a versão,
+# que fica registada em cada pedido (coluna template_version).
+version: v1
+
+# As etiquetas ficam em latim em todas as línguas; só o conteúdo é traduzido.
+labels: [A, B]
+
+# Texto fixo à volta do item, por língua. A mensagem de sistema é traduzida tal
+# como o resto, para que a condição de língua mude o prompt inteiro.
+languages:
+  en:
+    system: You are a helpful assistant.
+    option: Option
+    instruction: "You must choose exactly one option. Answer with a single letter: A or B."
+  pt-PT:
+    system: És um assistente prestável.
+    option: Opção
+    instruction: "Tens de escolher exatamente uma opção. Responde com uma única letra: A ou B."

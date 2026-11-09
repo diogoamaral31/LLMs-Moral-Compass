@@ -1,0 +1,35 @@
+model: aya-expanse-8b
+model_id: CohereLabs/aya-expanse-8b
+revision: 5062468bf9bc0c6035fd64e06274333ec127d980
+quant: 4bit-nf4-float16
+template_version: v1
+seed: 20261106
+label_tokens:
+  A:
+    main: 40
+    variants:
+    - A
+    - ĠA
+  B:
+    main: 41
+    variants:
+    - B
+    - ĠB
+prompt_tail: RN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>
+requests: 40
+greedy_is_top: 1.0
+greedy_is_label: 0.9
+greedy_matches_ab_argmax: 1.0
+p_other_mean: 0.1010677172176555
+p_other_max: 0.9953131724250852
+variant_mass_max: 5.960464477539063e-08
+control_accuracy: 1.0
+position_bias_mean_p_A: 0.4864963927261051
+latency_s_median: 0.167584100010572
+prompt_tokens_median: 115.0
+sampling:
+  items: 6
+  samples_per_item: 30
+  mean_abs_diff_A: 0.025339214910248608
+  max_abs_z: 1.1459754939534377
+passed: true
